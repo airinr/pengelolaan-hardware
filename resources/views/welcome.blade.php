@@ -47,10 +47,11 @@
         </a>
         <nav class="hidden md:flex items-center gap-8 text-sm">
           <a href="#jadwal" class="hover:text-brand-700">Jadwal Asisten</a>
+          <a href="#perangkat" class="hover:text-brand-700">Perangkat Hardware</a>
           <a href="#kontak" class="hover:text-brand-700">Kontak</a>
         </nav>
         <div class="hidden md:flex items-center gap-3">
-          <a href="#login" class="px-4 py-2 text-sm font-medium rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Login</a>
+          <a href="login" class="px-4 py-2 text-sm font-medium rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Login</a>
           <a href="#daftar" class="px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white hover:bg-brand-700 shadow-soft">Daftar</a>
         </div>
         <button id="menuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700">
@@ -63,19 +64,19 @@
       <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-2 text-sm">
         <a href="#jadwal" class="py-2">Jadwal Asisten</a>
         <a href="#kontak" class="py-2">Kontak</a>
-        <a href="#login" class="py-2">Login</a>
+        <a href="/login" class="py-2">Login</a>
         <a href="#daftar" class="py-2 font-semibold text-brand-700">Daftar</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-950">
+  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-950 flex items-center justify-between">
     <div class="absolute -top-28 -left-28 h-80 w-80 rounded-full bg-brand-300/30 blur-3xl"></div>
     <div class="absolute -bottom-32 -right-28 h-80 w-80 rounded-full bg-blue-200/40 blur-3xl"></div>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24 flex items-center justify-between">
+      <div class="grid lg:grid-cols-2 gap-10">
         <div>
           <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-xs font-medium text-brand-700 dark:bg-slate-900/40">UNIKOM • Laboratorium Hardware</span>
           <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">Website Pengelola <span class="text-brand-700">Perangkat Hardware</span> & Asisten Lab. Hardware UNIKOM</h1>
@@ -89,23 +90,16 @@
             <div><div class="text-3xl font-extrabold">10+</div><div class="mt-1 text-xs text-slate-500">Perangkat</div></div>
           </div>
         </div>
-        <div class="relative">
-          <div class="rounded-2xl border border-slate-200/60 dark:border-slate-700/60 bg-white/80 dark:bg-slate-900/50 p-3 shadow-soft">
+        <div class="flex items-center justify-between">
+          <div class="rounded-2xl border border-slate-200/60 dark:border-slate-700/60 bg-white/80 dark:bg-slate-900/50 p-3 shadow-soft flex items-center justify-between">
             <div class="rounded-xl bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 p-6">
               <div class="flex items-center justify-between">
                 <div class="h-3 w-3 rounded-full bg-sky-400"></div>
                 <div class="h-3 w-3 rounded-full bg-amber-400"></div>
                 <div class="h-3 w-3 rounded-full bg-emerald-400"></div>
               </div>
-              <div class="mt-6 grid gap-4">
-                <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">
-                  <div class="text-xs text-slate-500">Ringkasan Stok</div>
-                  <div class="mt-2 grid grid-cols-3 gap-3 text-center">
-                    <div><div class="text-xl font-bold text-brand-700">128</div><div class="text-[11px]">Arduino/MCU</div></div>
-                    <div><div class="text-xl font-bold text-brand-700">64</div><div class="text-[11px]">Raspberry Pi</div></div>
-                    <div><div class="text-xl font-bold text-brand-700">420</div><div class="text-[11px]">Sensor & Modul</div></div>
-                  </div>
-                </div>
+              <div class="flex items-center">
+                <img src="{{ asset('assets/images/logo_komputer.png') }}" alt="UNIKOM" class="h-80 w-80 object-contain"/>
               </div>
             </div>
           </div>
@@ -144,6 +138,7 @@
                 <th class="px-4 py-3 text-left font-semibold">Waktu</th>
                 <th class="px-4 py-3 text-left font-semibold">Asisten</th>
                 <th class="px-4 py-3 text-left font-semibold">Dosen</th>
+                <th class="px-4 py-3 text-left font-semibold">Kelas</th>
                 <th class="px-4 py-3 text-left font-semibold">Ruang Lab</th>
               </tr>
             </thead>
@@ -154,6 +149,7 @@
                 <td class="px-4 py-3">08:00–10:00</td>
                 <td class="px-4 py-3">Airin Ristiana</td>
                 <td class="px-4 py-3">Ir. A. Setiawan, M.T.</td>
+                <td class="px-4 py-3">MN-1</td>
                 <td class="px-4 py-3">LAB-609</td>
               </tr>
               <tr data-hari="Selasa" class="hover:bg-brand-50/60 dark:hover:bg-slate-800/60">
@@ -161,6 +157,7 @@
                 <td class="px-4 py-3">10:00–12:00</td>
                 <td class="px-4 py-3">Bintang Mahesa</td>
                 <td class="px-4 py-3">Dr. D. Nugraha</td>
+                <td class="px-4 py-3">MN-1</td>
                 <td class="px-4 py-3">LAB-609</td>
               </tr>
               <tr data-hari="Rabu" class="hover:bg-brand-50/60 dark:hover:bg-slate-800/60">
@@ -168,6 +165,7 @@
                 <td class="px-4 py-3">09:00–11:00</td>
                 <td class="px-4 py-3">Citra Anindya</td>
                 <td class="px-4 py-3">Dr. Eng. S. Ramadhan</td>
+                <td class="px-4 py-3">MN-1</td>
                 <td class="px-4 py-3">LAB-609</td>
               </tr>
               <tr data-hari="Kamis" class="hover:bg-brand-50/60 dark:hover:bg-slate-800/60">
@@ -175,6 +173,7 @@
                 <td class="px-4 py-3">13:00–15:00</td>
                 <td class="px-4 py-3">Damar Pradipta</td>
                 <td class="px-4 py-3">Ir. R. Wirawan, M.T.</td>
+                <td class="px-4 py-3">MN-1</td>
                 <td class="px-4 py-3">LAB-609</td>
               </tr>
               <tr data-hari="Jumat" class="hover:bg-brand-50/60 dark:hover:bg-slate-800/60">
@@ -182,6 +181,7 @@
                 <td class="px-4 py-3">08:00–10:00</td>
                 <td class="px-4 py-3">Eka Prameswari</td>
                 <td class="px-4 py-3">Dr. I. Naufal</td>
+                <td class="px-4 py-3">MN-1</td>
                 <td class="px-4 py-3">LAB-609</td>
               </tr>
             </tbody>
@@ -204,48 +204,20 @@
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl sm:text-4xl font-extrabold">Perangkat Labolatorium Hardware</h2>
       </div>
-      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
         <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
-          <div class="h-40 w-40 rounded-lg bg-brand-600 text-white flex items-center justify-center">
+        <div class="h-40 w-40 rounded-lg bg-brand-600 text-white flex items-center justify-center">
             <img src="{{ asset('assets/images/motherboard.png') }}" alt="Mobo">
           </div>
           <h3 class="mt-4 font-semibold text-lg">Motherboard</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Jumlah Perangkat: 20</p>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Jumlah: 20</p>
         </article>
         <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
-          <div class="h-10 w-10 rounded-lg bg-brand-600 text-white flex items-center justify-center">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v5l4 2-1 1-4-2.5V7h1z"/></svg>
+        <div class="h-40 w-40 rounded-lg bg-brand-600 text-white flex items-center justify-center">
+            <img src="{{ asset('assets/images/pin_group.png') }}" alt="Mobo">
           </div>
-          <h3 class="mt-4 font-semibold text-lg">Jadwal & Asistensi</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Kelola jadwal asisten per mata kuliah, dosen pembimbing, dan ruangan lab.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
-          <div class="h-10 w-10 rounded-lg bg-brand-600 text-white flex items-center justify-center">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M5 3h14v18H5z" opacity=".25"/><path d="M8 7h8v2H8m-0 4h8v2H8m0 4h6v2H8"/></svg>
-          </div>
-          <h3 class="mt-4 font-semibold text-lg">Perawatan & Laporan</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Jadwal kalibrasi, tiket maintenance, dan laporan PDF/CSV.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
-          <div class="h-10 w-10 rounded-lg bg-brand-600 text-white flex items-center justify-center">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M3 10l9-6 9 6v10h-6v-6H9v6H3z"/></svg>
-          </div>
-          <h3 class="mt-4 font-semibold text-lg">Multi‑Lab & Ruang</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Pantau aset antar ruang: Embedded, IoT, Elektronika, dsb.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
-          <div class="h-10 w-10 rounded-lg bg-brand-600 text-white flex items-center justify-center">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 3l4 4H8l4-4zM6 9h12v10H6z"/></svg>
-          </div>
-          <h3 class="mt-4 font-semibold text-lg">Peminjaman & Akses</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Alur booking, approval dosen, dan tracking pengembalian.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
-          <div class="h-10 w-10 rounded-lg bg-brand-600 text-white flex items-center justify-center">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 6h2v5h-2zm0 6h2v2h-2z"/></svg>
-          </div>
-          <h3 class="mt-4 font-semibold text-lg">Keamanan & Audit</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Log aktivitas, role‑based access, jejak audit lengkap.</p>
+          <h3 class="mt-4 font-semibold text-lg">Pin Group</h3>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Jumlah: 20</p>
         </article>
       </div>
     </div>
@@ -256,12 +228,8 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold">Siap diintegrasikan dengan Sistem UNIKOM</h2>
+          <h2 class="text-3xl sm:text-4xl font-extrabold">Hubungi Kami</h2>
           <p class="mt-3 text-slate-600 dark:text-slate-300">Dukungan SSO, role dosen/asisten/mahasiswa, dan audit log. Hubungi kami untuk demo.</p>
-          <div class="mt-6 flex gap-3">
-            <a href="#" class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-6 py-3 text-white font-semibold shadow-soft hover:bg-brand-700">Minta Demo</a>
-            <a href="#" class="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Dokumentasi</a>
-          </div>
         </div>
         <form class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white/80 dark:bg-slate-900/40">
           <div class="grid sm:grid-cols-2 gap-4">
@@ -275,7 +243,7 @@
             </div>
             <div class="sm:col-span-2">
               <label class="text-xs text-slate-500">Pesan</label>
-              <textarea rows="4" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white/80 dark:bg-slate-900/60 px-3 py-2 text-sm" placeholder="Ceritakan kebutuhan lab Anda"></textarea>
+              <textarea rows="4" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white/80 dark:bg-slate-900/60 px-3 py-2 text-sm" placeholder="Ceritakan kebutuhan atau keluhan lab"></textarea>
             </div>
           </div>
           <button type="button" class="mt-4 w-full rounded-xl bg-brand-600 px-6 py-3 text-white font-semibold shadow-soft hover:bg-brand-700">Kirim</button>
