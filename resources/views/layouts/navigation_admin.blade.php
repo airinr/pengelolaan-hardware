@@ -55,13 +55,13 @@
   $items = [
     [
       'label'  => 'Dashboard',
-      'href'   => url('/admin'),
+      'href'   => url('/dashboard'),
       'active' => request()->is('admin') || request()->is('admin/dashboard*'),
       'icon'   => $icon('<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5Z"/>'),
     ],
     [
       'label'  => 'Perangkat',
-      'href'   => url('/admin/perangkat'),
+      'href'   => url('/perangkat_admin'),
       'active' => request()->is('admin/perangkat*'),
       'icon'   => $icon('<path d="M4 6h16v4H4zM4 14h16v4H4z"/>'),
     ],
@@ -135,13 +135,6 @@
           <h1 class="text-lg font-semibold">@yield('page_title','Dashboard')</h1>
         </div>
 
-        {{-- Search (opsional) --}}
-        <form action="#" class="hidden md:block">
-          <label class="relative">
-            <input type="text" placeholder="Cari…" class="rounded-xl bg-slate-100/70 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-          </label>
-        </form>
 
         {{-- Dark mode toggle --}}
         <button id="themeBtn" class="ml-1 inline-flex items-center justify-center h-10 w-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Tema">
